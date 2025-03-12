@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Logout</a></li>
+        <li><a href="#" id="edit-form-link">Edit Form</a></li>
+        <li><a href="../pages/dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>User Control Panel</h2>
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Role</th>
+          <th>Approved</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- User data will be dynamically populated here -->
+      </tbody>
+    </table>
+
+    <!-- Editable Form Settings -->
+    <div id="form-settings" style="display: none;">
+      <h2>Set Default Date for Dashboard</h2>
+      <form id="set-date-form">
+        <label for="default-date">Default Date:</label>
+        <input type="date" id="default-date" name="default-date" required>
+        <button type="submit">Save Date</button>
+      </form>
+
+      <h2>Manage Food Preferences</h2>
+      <div>
+        <label for="new-food-preference">Add New Food Preference:</label>
+        <input type="text" id="new-food-preference" placeholder="e.g., Vegetarian">
+        <button id="add-food-preference">Add</button>
+      </div>
+
+      <h3>Current Food Preferences</h3>
+      <ul id="food-preferences-list">
+        <!-- Food preferences will be dynamically listed here -->
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Office Lunch Attendance</p>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
