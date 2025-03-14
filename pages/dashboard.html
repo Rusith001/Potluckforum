@@ -21,7 +21,7 @@
       <!-- Date -->
       <label for="date">Date:</label>
       <input type="text" id="date" name="date" readonly>
-      
+
       <!-- Do you attend or not? -->
       <label for="attend">Do you attend or not?</label>
       <select id="attend" name="attend" required>
@@ -39,6 +39,15 @@
 
       <button type="submit">Submit</button>
     </form>
+
+    <!-- Submission History -->
+    <div class="history-section">
+      <h3 onclick="toggleHistory()">Submission History ▼</h3>
+      <div id="history-container" style="display: none;">
+        <p id="no-history-message" style="display: block;">No submissions yet.</p>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
   </main>
   <footer>
     <p>&copy; 2023 Office Lunch Attendance</p>
